@@ -11,13 +11,14 @@
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-t]').forEach(function (el) { el.innerHTML = dict[el.getAttribute('data-t')]; });
     if (dict._title) document.title = dict._title;
-    document.querySelectorAll('.langs button').forEach(function (b) {
+    document.querySelectorAll('[data-t-title]').forEach(function (el) { var v = dict[el.getAttribute('data-t-title')]; if (v) { el.title = v; el.setAttribute('aria-label', v); } });
+    document.querySelectorAll('.sh-lang button').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
       b.classList.toggle('on', on); b.setAttribute('aria-checked', on ? 'true' : 'false');
     });
     try { localStorage.setItem(KEY, lang); } catch (e) {}
   }
-  document.querySelectorAll('.langs button').forEach(function (b) {
+  document.querySelectorAll('.sh-lang button').forEach(function (b) {
     b.addEventListener('click', function () { apply(b.getAttribute('data-lang')); });
   });
   apply(initial());

@@ -1,0 +1,29 @@
+/* Shared site header (identical copy in every project demo). Needs --paper, --surface, --ink, --muted, --line, --accent. */
+.sh { border-bottom: 1px solid var(--line); position: sticky; top: env(safe-area-inset-top, 0px); background: var(--paper); z-index: 5; }
+.sh-inner { max-width: 1180px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+.sh-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.sh-home { flex: none; display: grid; place-items: center; width: 32px; height: 32px; box-sizing: border-box; border: 1px solid var(--line); border-radius: 7px; color: var(--muted); text-decoration: none; }
+.sh-home:hover { color: var(--ink); border-color: var(--muted); }
+.sh-home svg { width: 17px; height: 17px; }
+.sh-crumbs { display: flex; align-items: center; gap: 7px; font-size: 15px; line-height: 1.2; min-width: 0; white-space: nowrap; overflow: hidden; }
+.sh-crumbs a { color: var(--muted); text-decoration: none; }
+.sh-crumbs a:hover { color: var(--ink); text-decoration: underline; }
+.sh-crumbs .sep { color: var(--muted); opacity: 0.6; }
+.sh-crumbs b { font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; }
+.sh-right { display: flex; align-items: center; gap: 18px; flex: none; }
+.sh-nav { display: flex; gap: 18px; }
+.sh-link { font-size: 14px; color: var(--muted); text-decoration: none; white-space: nowrap; }
+.sh-link:hover { color: var(--ink); }
+.sh-btn { all: unset; box-sizing: border-box; cursor: pointer; height: 32px; display: inline-flex; align-items: center; font-size: 13px; color: var(--muted); padding: 0 11px; border: 1px solid var(--line); border-radius: 7px; white-space: nowrap; }
+.sh-btn:hover { color: var(--ink); border-color: var(--muted); }
+.sh-lang { display: inline-flex; box-sizing: border-box; height: 32px; align-items: center; padding: 2px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); }
+.sh-lang button { all: unset; cursor: pointer; padding: 4px 8px; font-size: 12px; line-height: 1.2; letter-spacing: 0.03em; border-radius: 5px; color: var(--muted); }
+.sh-lang button.on { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px rgb(0 0 0 / 0.08); }
+.sh-home:focus-visible, .sh-btn:focus-visible, .sh-lang button:focus-visible, .sh-link:focus-visible, .sh-crumbs a:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+@media (max-width: 900px) { .sh-nav { display: none; } }
+@media (max-width: 560px) {
+  .sh-inner { padding: 0 16px; gap: 10px; }
+  .sh-right { gap: 10px; }
+  .sh-crumbs { font-size: 14px; }
+  .sh-crumbs .sh-hide-sm, .sh-crumbs .sh-hide-sm + .sep { display: none; }
+}

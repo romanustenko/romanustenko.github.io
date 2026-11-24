@@ -6,23 +6,25 @@
   <title>Roman Ustenko — Projects</title>
   <meta name="description" content="Machine learning and computer vision projects by Roman Ustenko." />
   <meta property="og:title" content="Roman Ustenko — Projects" />
-  <meta property="og:image" content="https://romanustenko.github.io/satellite-change/og.png" />
+  <meta property="og:image" content="https://romanustenko.github.io/projects/satellite-change/og.png" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/site-header.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="shell top-inner">
-      <a class="brand" href="./">Roman Ustenko</a>
-      <div class="top-right">
-        <a class="nav-link" href="about.html" target="_blank" rel="noopener" data-t="about">About me</a>
-        <a class="nav-link" href="https://github.com/romanustenko" target="_blank" rel="noopener">GitHub</a>
-        <div class="langs" role="radiogroup" aria-label="Language">
-          <button role="radio" data-lang="en">EN</button><button role="radio" data-lang="de">DE</button><button role="radio" data-lang="ru">RU</button>
-        </div>
+  <header class="sh">
+    <div class="sh-inner">
+      <div class="sh-left">
+        <a class="sh-home" href="./" data-t-title="home" title="Main menu" aria-label="Main menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg></a>
+        <nav class="sh-crumbs" aria-label="Breadcrumb"><b>projects</b></nav>
+      </div>
+      <div class="sh-right">
+        <a class="sh-link" href="about.html" target="_blank" rel="noopener" data-t="about">About me</a>
+        <a class="sh-link" href="https://github.com/romanustenko" target="_blank" rel="noopener">GitHub</a>
+        <div class="sh-lang" role="radiogroup" aria-label="Language"><button role="radio" data-lang="en">EN</button><button role="radio" data-lang="de">DE</button><button role="radio" data-lang="ru">RU</button></div>
       </div>
     </div>
   </header>
@@ -39,11 +41,11 @@
       <article class="project">
         <img src="assets/satellite-change.png" alt="" />
         <div class="project-body">
-          <h3><a href="satellite-change/" data-t="p1title">Single-stage vs two-stage semantic change detection</a></h3>
+          <h3><a href="projects/satellite-change/" data-t="p1title">Single-stage vs two-stage semantic change detection</a></h3>
           <p data-t="p1text">Twelve semantic change detection systems on the SECOND benchmark, compared under equal training compute.</p>
           <p class="tags" data-t="p1tags">PyTorch · remote sensing · change detection · experimental design</p>
           <div class="actions">
-            <a class="btn primary" href="satellite-change/">
+            <a class="btn primary" href="projects/satellite-change/">
               <span data-t="demo">Open demo</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
             </a>
@@ -61,15 +63,15 @@
 
   <script>
     window.TEXT = {
-      en: { _title: 'Roman Ustenko — Projects', about: 'About me', lede: 'Projects in machine learning and computer vision.', projects: 'Projects',
+      en: { _title: 'Roman Ustenko — Projects', home: 'Main menu', about: 'About me', lede: 'Projects in machine learning and computer vision.', projects: 'Projects',
         p1title: 'Single-stage vs two-stage change detection',
         p1text: 'Twelve semantic change detection systems on SECOND under equal training compute: one model on the whole image vs detector → ROI → semantic model.',
         p1tags: 'PyTorch · remote sensing · experimental design', demo: 'Open demo', code: 'Code and report' },
-      de: { _title: 'Roman Ustenko — Projekte', about: 'Über mich', lede: 'Projekte zu maschinellem Lernen und Computer Vision.', projects: 'Projekte',
+      de: { _title: 'Roman Ustenko — Projekte', home: 'Hauptmenü', about: 'Über mich', lede: 'Projekte zu maschinellem Lernen und Computer Vision.', projects: 'Projekte',
         p1title: 'Einstufige vs. zweistufige Änderungserkennung',
         p1text: 'Zwölf Systeme zur semantischen Änderungserkennung auf SECOND bei gleichem Trainingsaufwand: ein Modell für das ganze Bild vs. Detektor → ROI → semantisches Modell.',
         p1tags: 'PyTorch · Fernerkundung · Versuchsplanung', demo: 'Demo öffnen', code: 'Code und Bericht' },
-      ru: { _title: 'Роман Устенко — проекты', about: 'Обо мне', lede: 'Проекты в области машинного обучения и компьютерного зрения.', projects: 'Проекты',
+      ru: { _title: 'Роман Устенко — проекты', home: 'Главное меню', about: 'Обо мне', lede: 'Проекты в области машинного обучения и компьютерного зрения.', projects: 'Проекты',
         p1title: 'Одностадийное и двухстадийное обнаружение изменений',
         p1text: 'Двенадцать систем семантического обнаружения изменений на SECOND при равном бюджете обучения: одна модель на весь снимок против цепочки детектор → ROI → семантическая модель.',
         p1tags: 'PyTorch · дистанционное зондирование · дизайн экспериментов', demo: 'Открыть демо', code: 'Код и отчёт' },

@@ -11,17 +11,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
-.shell { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-.top { border-bottom: 1px solid var(--line); }
-.top-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
-.brand { font: 500 19px/1 var(--serif); text-decoration: none; letter-spacing: -0.01em; }
-.top-right { display: flex; align-items: center; gap: 20px; }
-.nav-link { font-size: 14px; color: var(--muted); text-decoration: none; }
-.nav-link:hover { color: var(--ink); }
-.langs { display: inline-flex; background: var(--surface); border: 1px solid var(--line); border-radius: 7px; padding: 2px; }
-.langs button { all: unset; cursor: pointer; padding: 3px 8px; font-size: 12px; letter-spacing: 0.03em; border-radius: 5px; color: var(--muted); }
-.langs button.on { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px rgb(0 0 0 / 0.08); }
-.langs button:focus-visible { outline: 2px solid var(--accent); }
+.shell { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 .hero { padding: 72px 0 40px; }
 h1 { font: 400 clamp(34px, 5vw, 52px)/1.1 var(--serif); letter-spacing: -0.02em; margin: 0 0 14px; }
 .lede { font-size: 18px; color: var(--muted); margin: 0; max-width: 60ch; }
@@ -53,15 +43,10 @@ h1 { font: 400 clamp(34px, 5vw, 52px)/1.1 var(--serif); letter-spacing: -0.02em;
 .contacts { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 10px; }
 .contacts a { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--accent); font-weight: 500; }
 .contacts svg { width: 18px; height: 18px; }
-.back { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: var(--muted); text-decoration: none; padding: 5px 10px 5px 8px; border: 1px solid var(--line); border-radius: 6px; }
-.back:hover { color: var(--ink); border-color: var(--muted); }
-.back svg { width: 16px; height: 16px; }
 @media (max-width: 960px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
 @media (max-width: 700px) {
   .shell { padding: 0 16px; }
   .hero { padding: 48px 0 28px; }
-  .top-right { gap: 12px; }
-}
-.brand, .nav-link { white-space: nowrap; }
-@media (max-width: 420px) { .brand { font-size: 16px; } .top-right { gap: 10px; } }
+  }
+.brand, @media (max-width: 420px) { 

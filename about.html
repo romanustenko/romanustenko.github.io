@@ -9,16 +9,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/site-header.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="shell top-inner">
-      <a class="back" href="./">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
-        <span data-t="home">Main menu</span>
-      </a>
-      <div class="langs" role="radiogroup" aria-label="Language">
-        <button role="radio" data-lang="en">EN</button><button role="radio" data-lang="de">DE</button><button role="radio" data-lang="ru">RU</button>
+  <header class="sh">
+    <div class="sh-inner">
+      <div class="sh-left">
+        <a class="sh-home" href="./" data-t-title="home" title="Main menu" aria-label="Main menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg></a>
+        <nav class="sh-crumbs" aria-label="Breadcrumb"><b>about</b></nav>
+      </div>
+      <div class="sh-right">
+        <div class="sh-lang" role="radiogroup" aria-label="Language"><button role="radio" data-lang="en">EN</button><button role="radio" data-lang="de">DE</button><button role="radio" data-lang="ru">RU</button></div>
       </div>
     </div>
   </header>
