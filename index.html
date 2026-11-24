@@ -35,9 +35,10 @@
 
     <section class="projects">
       <h2 class="label" data-t="projects">Projects</h2>
+      <div class="grid">
       <article class="project">
         <img src="assets/satellite-change.png" alt="" />
-        <div>
+        <div class="project-body">
           <h3><a href="satellite-change/" data-t="p1title">Single-stage vs two-stage semantic change detection</a></h3>
           <p data-t="p1text">Twelve semantic change detection systems on the SECOND benchmark, compared under equal training compute.</p>
           <p class="tags" data-t="p1tags">PyTorch · remote sensing · change detection · experimental design</p>
@@ -53,6 +54,7 @@
           </div>
         </div>
       </article>
+      </div>
     </section>
   </main>
   <footer class="shell foot">© 2026 Roman Ustenko</footer>
@@ -60,17 +62,17 @@
   <script>
     window.TEXT = {
       en: { _title: 'Roman Ustenko — Projects', about: 'About me', lede: 'Projects in machine learning and computer vision.', projects: 'Projects',
-        p1title: 'Single-stage vs two-stage semantic change detection',
-        p1text: 'Twelve semantic change detection systems on the SECOND benchmark, compared under equal training compute: three single-stage models against detector&nbsp;→&nbsp;ROI&nbsp;→&nbsp;semantic-model pipelines, preceded by a study of binary change detectors on LEVIR-CD.',
-        p1tags: 'PyTorch · remote sensing · change detection · experimental design', demo: 'Open demo', code: 'Code and report' },
+        p1title: 'Single-stage vs two-stage change detection',
+        p1text: 'Twelve semantic change detection systems on SECOND under equal training compute: one model on the whole image vs detector → ROI → semantic model.',
+        p1tags: 'PyTorch · remote sensing · experimental design', demo: 'Open demo', code: 'Code and report' },
       de: { _title: 'Roman Ustenko — Projekte', about: 'Über mich', lede: 'Projekte zu maschinellem Lernen und Computer Vision.', projects: 'Projekte',
-        p1title: 'Einstufige vs. zweistufige semantische Änderungserkennung',
-        p1text: 'Zwölf Systeme zur semantischen Änderungserkennung auf dem SECOND-Benchmark, verglichen bei gleichem Trainingsaufwand: drei einstufige Modelle gegen Pipelines aus Detektor&nbsp;→&nbsp;ROI&nbsp;→&nbsp;semantischem Modell, vorab eine Studie zu binären Änderungsdetektoren auf LEVIR-CD.',
-        p1tags: 'PyTorch · Fernerkundung · Änderungserkennung · Versuchsplanung', demo: 'Demo öffnen', code: 'Code und Bericht' },
+        p1title: 'Einstufige vs. zweistufige Änderungserkennung',
+        p1text: 'Zwölf Systeme zur semantischen Änderungserkennung auf SECOND bei gleichem Trainingsaufwand: ein Modell für das ganze Bild vs. Detektor → ROI → semantisches Modell.',
+        p1tags: 'PyTorch · Fernerkundung · Versuchsplanung', demo: 'Demo öffnen', code: 'Code und Bericht' },
       ru: { _title: 'Роман Устенко — проекты', about: 'Обо мне', lede: 'Проекты в области машинного обучения и компьютерного зрения.', projects: 'Проекты',
-        p1title: 'Одностадийные и двухстадийные системы семантического обнаружения изменений',
-        p1text: 'Двенадцать систем семантического обнаружения изменений на бенчмарке SECOND при равном вычислительном бюджете обучения: три одностадийные модели против цепочек детектор&nbsp;→&nbsp;ROI&nbsp;→&nbsp;семантическая модель. Перед этим — исследование бинарных детекторов изменений на LEVIR-CD.',
-        p1tags: 'PyTorch · дистанционное зондирование · обнаружение изменений · дизайн экспериментов', demo: 'Открыть демо', code: 'Код и отчёт' },
+        p1title: 'Одностадийное и двухстадийное обнаружение изменений',
+        p1text: 'Двенадцать систем семантического обнаружения изменений на SECOND при равном бюджете обучения: одна модель на весь снимок против цепочки детектор → ROI → семантическая модель.',
+        p1tags: 'PyTorch · дистанционное зондирование · дизайн экспериментов', demo: 'Открыть демо', code: 'Код и отчёт' },
     };
   </script>
   <script src="assets/i18n.js"></script>
