@@ -5,61 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roman Ustenko — Projects</title>
   <meta name="description" content="Machine learning and computer vision projects by Roman Ustenko." />
+  <meta property="og:title" content="Roman Ustenko — Projects" />
+  <meta property="og:image" content="https://romanustenko.github.io/satellite-change/og.png" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,500&display=swap" rel="stylesheet" />
-  <style>
-    :root { --paper: #ffffff; --surface: #f4f5f7; --ink: #1b1f24; --muted: #5b6470; --line: #e2e5ea; --accent: #1f3a5f; color-scheme: light; }
-    @media (prefers-color-scheme: dark) {
-      :root { --paper: #14171c; --surface: #1c2027; --ink: #e7eaee; --muted: #9aa3ad; --line: #2c323b; --accent: #93b4dd; color-scheme: dark; }
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.55 'Source Sans 3', system-ui, sans-serif; }
-    main, footer { max-width: 920px; margin: 0 auto; padding: 0 24px; }
-    header { padding: 72px 0 40px; border-bottom: 1px solid var(--line); }
-    h1 { font: 500 40px/1.15 'Source Serif 4', Georgia, serif; margin: 0 0 12px; letter-spacing: -0.01em; }
-    .lede { color: var(--muted); margin: 0 0 16px; max-width: 60ch; }
-    .links { display: flex; gap: 20px; font-size: 15px; }
-    a { color: var(--accent); }
-    h2 { font: 600 13px/1 'Source Sans 3', sans-serif; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 40px 0 18px; }
-    .project { display: grid; grid-template-columns: 320px 1fr; align-items: start; gap: 28px; padding: 22px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
-    .project img { width: 100%; border-radius: 4px; display: block; background: #fff; padding: 6px; border: 1px solid var(--line); }
-    .project h3 { font: 500 24px/1.25 'Source Serif 4', Georgia, serif; margin: 0 0 8px; }
-    .project p { margin: 0 0 12px; }
-    .tags { color: var(--muted); font-size: 14px; }
-    .project .links a { font-weight: 600; text-decoration: none; }
-    .project .links a:hover { text-decoration: underline; }
-    footer { padding-top: 48px; padding-bottom: 48px; color: var(--muted); font-size: 14px; }
-    @media (max-width: 640px) {
-      main, footer { padding: 0 16px; }
-      header { padding: 48px 0 28px; }
-      h1 { font-size: 32px; }
-      .project { grid-template-columns: 1fr; gap: 16px; padding: 16px; }
-      footer { padding-top: 36px; padding-bottom: 36px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Roman Ustenko</h1>
-      <p class="lede">Projects in machine learning and computer vision.</p>
-      <p class="links"><a href="https://github.com/romanustenko">GitHub</a></p>
-    </header>
-
-    <h2>Projects</h2>
-    <article class="project">
-      <a href="satellite-change/"><img src="assets/satellite-change.png" alt="Before and after aerial images with a semantic change map" /></a>
-      <div>
-        <h3>Single-stage vs two-stage semantic change detection</h3>
-        <p>Twelve semantic change detection systems on the SECOND benchmark, compared under equal
-          training compute: three single-stage models against detector&nbsp;→&nbsp;ROI&nbsp;→&nbsp;semantic-model
-          pipelines, preceded by a study of binary change detectors on LEVIR-CD.</p>
-        <p class="tags">PyTorch · remote sensing · change detection · experimental design</p>
-        <p class="links"><a href="satellite-change/">Demo</a><a href="https://github.com/romanustenko/satellite-change-intelligence">Code and report</a></p>
+  <header class="top">
+    <div class="shell top-inner">
+      <a class="brand" href="./">Roman Ustenko</a>
+      <div class="top-right">
+        <a class="nav-link" href="about.html" target="_blank" rel="noopener" data-t="about">About me</a>
+        <a class="nav-link" href="https://github.com/romanustenko" target="_blank" rel="noopener">GitHub</a>
+        <div class="langs" role="radiogroup" aria-label="Language">
+          <button role="radio" data-lang="en">EN</button><button role="radio" data-lang="de">DE</button><button role="radio" data-lang="ru">RU</button>
+        </div>
       </div>
-    </article>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <h1>Roman Ustenko</h1>
+      <p class="lede" data-t="lede">Projects in machine learning and computer vision.</p>
+    </section>
+
+    <section class="projects">
+      <h2 class="label" data-t="projects">Projects</h2>
+      <article class="project">
+        <img src="assets/satellite-change.png" alt="" />
+        <div>
+          <h3><a href="satellite-change/" data-t="p1title">Single-stage vs two-stage semantic change detection</a></h3>
+          <p data-t="p1text">Twelve semantic change detection systems on the SECOND benchmark, compared under equal training compute.</p>
+          <p class="tags" data-t="p1tags">PyTorch · remote sensing · change detection · experimental design</p>
+          <div class="actions">
+            <a class="btn primary" href="satellite-change/">
+              <span data-t="demo">Open demo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+            <a class="btn secondary" href="https://github.com/romanustenko/satellite-change-intelligence" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+              <span data-t="code">Code and report</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
-  <footer>© 2026 Roman Ustenko</footer>
+  <footer class="shell foot">© 2026 Roman Ustenko</footer>
+
+  <script>
+    window.TEXT = {
+      en: { _title: 'Roman Ustenko — Projects', about: 'About me', lede: 'Projects in machine learning and computer vision.', projects: 'Projects',
+        p1title: 'Single-stage vs two-stage semantic change detection',
+        p1text: 'Twelve semantic change detection systems on the SECOND benchmark, compared under equal training compute: three single-stage models against detector&nbsp;→&nbsp;ROI&nbsp;→&nbsp;semantic-model pipelines, preceded by a study of binary change detectors on LEVIR-CD.',
+        p1tags: 'PyTorch · remote sensing · change detection · experimental design', demo: 'Open demo', code: 'Code and report' },
+      de: { _title: 'Roman Ustenko — Projekte', about: 'Über mich', lede: 'Projekte zu maschinellem Lernen und Computer Vision.', projects: 'Projekte',
+        p1title: 'Einstufige vs. zweistufige semantische Änderungserkennung',
+        p1text: 'Zwölf Systeme zur semantischen Änderungserkennung auf dem SECOND-Benchmark, verglichen bei gleichem Trainingsaufwand: drei einstufige Modelle gegen Pipelines aus Detektor&nbsp;→&nbsp;ROI&nbsp;→&nbsp;semantischem Modell, vorab eine Studie zu binären Änderungsdetektoren auf LEVIR-CD.',
+        p1tags: 'PyTorch · Fernerkundung · Änderungserkennung · Versuchsplanung', demo: 'Demo öffnen', code: 'Code und Bericht' },
+      ru: { _title: 'Роман Устенко — проекты', about: 'Обо мне', lede: 'Проекты в области машинного обучения и компьютерного зрения.', projects: 'Проекты',
+        p1title: 'Одностадийные и двухстадийные системы семантического обнаружения изменений',
+        p1text: 'Двенадцать систем семантического обнаружения изменений на бенчмарке SECOND при равном вычислительном бюджете обучения: три одностадийные модели против цепочек детектор&nbsp;→&nbsp;ROI&nbsp;→&nbsp;семантическая модель. Перед этим — исследование бинарных детекторов изменений на LEVIR-CD.',
+        p1tags: 'PyTorch · дистанционное зондирование · обнаружение изменений · дизайн экспериментов', demo: 'Открыть демо', code: 'Код и отчёт' },
+    };
+  </script>
+  <script src="assets/i18n.js"></script>
 </body>
 </html>

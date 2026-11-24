@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman Ustenko — About</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="shell top-inner">
+      <a class="back" href="./">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg>
+        <span data-t="home">Main menu</span>
+      </a>
+      <div class="langs" role="radiogroup" aria-label="Language">
+        <button role="radio" data-lang="en">EN</button><button role="radio" data-lang="de">DE</button><button role="radio" data-lang="ru">RU</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell about">
+    <h1>Roman Ustenko</h1>
+    <p class="lede" data-t="lede">Machine learning and computer vision.</p>
+    <p data-t="text">I build and evaluate machine learning models for computer vision — from data preparation, training and hyperparameter search to fair comparisons under a fixed compute budget and interactive demos of the results.</p>
+
+    <h2 class="label" data-t="contacts">Contacts</h2>
+    <ul class="contacts">
+      <li><a href="https://github.com/romanustenko" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        github.com/romanustenko</a></li>
+    </ul>
+  </main>
+  <footer class="shell foot">© 2026 Roman Ustenko</footer>
+
+  <script>
+    window.TEXT = {
+      en: { _title: 'Roman Ustenko — About', home: 'Main menu', lede: 'Machine learning and computer vision.', contacts: 'Contacts',
+        text: 'I build and evaluate machine learning models for computer vision — from data preparation, training and hyperparameter search to fair comparisons under a fixed compute budget and interactive demos of the results.' },
+      de: { _title: 'Roman Ustenko — Über mich', home: 'Hauptmenü', lede: 'Maschinelles Lernen und Computer Vision.', contacts: 'Kontakt',
+        text: 'Ich entwickle und bewerte Modelle des maschinellen Lernens für Computer Vision — von Datenaufbereitung, Training und Hyperparametersuche bis zu fairen Vergleichen bei festem Rechenbudget und interaktiven Demos der Ergebnisse.' },
+      ru: { _title: 'Роман Устенко — обо мне', home: 'Главное меню', lede: 'Машинное обучение и компьютерное зрение.', contacts: 'Контакты',
+        text: 'Я разрабатываю и оцениваю модели машинного обучения для компьютерного зрения — от подготовки данных, обучения и подбора гиперпараметров до честных сравнений при фиксированном вычислительном бюджете и интерактивных демо результатов.' },
+    };
+  </script>
+  <script src="assets/i18n.js"></script>
+</body>
+</html>
